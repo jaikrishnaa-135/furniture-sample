@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nest & Noir — Furniture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <nav class="nav__inner">
+      <ul class="nav__links">
+        <li><a href="#">Home</a></li>
+        <li class="has-dropdown" style="position:relative">
+          <a href="#" id="products-nav-link">Products <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown">
+            <a href="#" onclick="event.preventDefault();document.querySelector('.bestsellers').scrollIntoView({behavior:'smooth'})">Living Room</a>
+            <a href="#" onclick="event.preventDefault();document.querySelector('.bestsellers').scrollIntoView({behavior:'smooth'})">Bedroom</a>
+            <a href="#" onclick="event.preventDefault();document.querySelector('.bestsellers').scrollIntoView({behavior:'smooth'})">Dining</a>
+            <a href="#" onclick="event.preventDefault();document.querySelector('.shop-room').scrollIntoView({behavior:'smooth'})">Outdoor</a>
+          </div>
+        </li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <a href="#" class="nav__logo">Nest &amp; Noir</a>
+      <div class="nav__actions">
+        <button class="icon-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </button>
+        <button class="icon-btn" id="mobile-menu-btn" aria-label="Menu" style="display:none">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80" alt="Hero sofa" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__tag">New Collection 2026</p>
+      <h1 class="hero__title">The Winter Sale</h1>
+      <p class="hero__sub">Discover elegant sofas in style from Europe &amp; beyond. Artisan crafted, built to last a lifetime.</p>
+      <a href="#" class="btn btn--light">Shop Now</a>
+    </div>
+    <div class="hero__thumbs">
+      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=200&q=70" alt="thumb 1" />
+      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=200&q=70" alt="thumb 2" />
+      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=200&q=70" alt="thumb 3" />
+    </div>
+  </section>
+
+  <!-- SALE BANNER -->
+  <div class="sale-strip">
+    <span>Summer Sale &rarr;</span>
+    <span>Leather Sofas &rarr;</span>
+    <span>Sale Price Items &rarr;</span>
+    <span>Up to 40% Sale &rarr;</span>
+  </div>
+
+  <!-- BESTSELLERS -->
+  <section class="section bestsellers">
+    <div class="section__head">
+      <h2>Shop our bestsellers</h2>
+      <a href="#" class="link-accent">View all Products &rarr;</a>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=75" alt="Serenity Timber Loveseat" />
+          <button class="wishlist-btn" aria-label="Wishlist">&#9825;</button>
+        </div>
+        <div class="product-card__swatches">
+          <span class="swatch" style="background:#c8b89a"></span>
+          <span class="swatch" style="background:#8b7355"></span>
+        </div>
+        <h3>Serenity Timber Loveseat</h3>
+        <div class="product-card__price">
+          <span class="price-old">&#8377;1,200</span>
+          <span class="price-new">&#8377;1,000</span>
+        </div>
+        <a href="#" class="product-card__cta">View &rsaquo;</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=75" alt="Block Nomad Sofa 3-piece" />
+          <button class="wishlist-btn" aria-label="Wishlist">&#9825;</button>
+        </div>
+        <div class="product-card__swatches">
+          <span class="swatch" style="background:#9e9e9e"></span>
+          <span class="swatch" style="background:#5c5c5c"></span>
+          <span class="swatch swatch--dark" style="background:#222"></span>
+          <span class="swatch-more">+1 more options</span>
+        </div>
+        <h3>Block Nomad Sofa — 3 piece</h3>
+        <div class="product-card__price">
+          <span class="price-old">&#8377;2,500</span>
+          <span class="price-new">&#8377;2,000</span>
+        </div>
+        <a href="#" class="product-card__cta">View &rsaquo;</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=500&q=75" alt="Nomad Sofa Loveseat" />
+          <button class="wishlist-btn" aria-label="Wishlist">&#9825;</button>
+        </div>
+        <div class="product-card__swatches">
+          <span class="swatch" style="background:#e8e0d5"></span>
+          <span class="swatch" style="background:#c4b49a"></span>
+          <span class="swatch swatch--dark" style="background:#333"></span>
+          <span class="swatch-more">+1 more options</span>
+        </div>
+        <h3>Nomad Sofa — Loveseat</h3>
+        <div class="product-card__price">
+          <span class="price-old">&#8377;1,800</span>
+          <span class="price-new">&#8377;1,500</span>
+        </div>
+        <a href="#" class="product-card__cta">View &rsaquo;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCT -->
+  <section class="featured">
+    <div class="featured__img">
+      <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=700&q=80" alt="Featured sofa" />
+    </div>
+    <div class="featured__info">
+      <p class="featured__tag">Featured</p>
+      <h2>The Nomad Collection</h2>
+      <p>Crafted from sustainably sourced timber and premium upholstery. A timeless piece for every living space.</p>
+      <div class="featured__links">
+        <a href="#" class="link-accent">Summer Sale &rarr;</a>
+        <a href="#" class="link-accent">Leather Sofas &rarr;</a>
+        <a href="#" class="link-accent">Sale Price Items &rarr;</a>
+        <a href="#" class="link-accent">Up to 40% Sale &rarr;</a>
+      </div>
+      <a href="#" class="btn btn--dark">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- SHOP BY ROOM -->
+  <section class="section shop-room">
+    <div class="section__head">
+      <h2>Shop Pernok</h2>
+    </div>
+    <div class="room-banner">
+      <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&q=80" alt="Shop by room" />
+      <div class="room-banner__card">
+        <p>Outdoor Living</p>
+        <a href="#" class="btn btn--light btn--sm">Shop the Look</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="section__head">
+      <h2>Our Customers Say</h2>
+    </div>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Absolutely love my new sofa. The quality is outstanding and delivery was seamless."</p>
+        <div class="testimonial-card__author">
+          <img src="https://i.pravatar.cc/40?img=1" alt="Priya S." />
+          <span>Priya S.</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Best furniture purchase I've ever made. The timber loveseat is a showstopper."</p>
+        <div class="testimonial-card__author">
+          <img src="https://i.pravatar.cc/40?img=5" alt="Rahul M." />
+          <span>Rahul M.</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p>"Great range of options. The team was very helpful in choosing the right piece."</p>
+        <div class="testimonial-card__author">
+          <img src="https://i.pravatar.cc/40?img=9" alt="Ananya K." />
+          <span>Ananya K.</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Elegant design, premium feel. Worth every rupee. Will definitely buy again."</p>
+        <div class="testimonial-card__author">
+          <img src="https://i.pravatar.cc/40?img=12" alt="Vikram D." />
+          <span>Vikram D.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <div class="footer__logo">N&amp;N</div>
+      <p>Nest &amp; Noir</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Living Room</a></li>
+          <li><a href="#">Bedroom</a></li>
+          <li><a href="#">Dining</a></li>
+          <li><a href="#">Outdoor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Nest &amp; Noir. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BACKDROP -->
+  <div id="backdrop" class="backdrop"></div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- SEARCH OVERLAY -->
+  <div id="search-overlay" class="overlay search-overlay">
+    <button class="overlay__close" data-close="search-overlay" aria-label="Close">✕</button>
+    <div class="search-overlay__inner">
+      <h2>Search</h2>
+      <input id="search-input" type="text" placeholder="Search sofas, chairs, tables…" autocomplete="off" />
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- CART SIDE PANEL -->
+  <div id="cart-panel" class="side-panel">
+    <div class="side-panel__head">
+      <h3>Your Cart</h3>
+      <button class="overlay__close" data-close="cart-panel" aria-label="Close">✕</button>
+    </div>
+    <div id="cart-list" class="cart-list">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div id="cart-footer" class="cart-footer" style="display:none">
+      <div class="cart-footer__total">
+        <span>Total</span>
+        <span id="cart-total">₹0</span>
+      </div>
+      <button id="checkout-btn" class="btn btn--dark" style="width:100%">Checkout</button>
+    </div>
+  </div>
+
+  <!-- PRODUCT MODAL -->
+  <div id="product-modal" class="overlay product-modal">
+    <button class="overlay__close" data-close="product-modal" aria-label="Close">✕</button>
+    <div class="pm__inner">
+      <div class="pm__left">
+        <img class="pm__img" src="" alt="" />
+      </div>
+      <div class="pm__right">
+        <h2 class="pm__name"></h2>
+        <div class="pm__prices">
+          <span class="price-old pm__price-old"></span>
+          <span class="price-new pm__price-new"></span>
+        </div>
+        <p class="pm__desc"></p>
+        <button class="btn btn--dark pm__add-btn" style="margin-top:24px;width:100%">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART BADGE (injected into nav via JS) -->
+  <script>
+    // inject badge into cart button
+    const cartBtn = document.querySelector('[aria-label="Cart"]');
+    cartBtn.style.position = 'relative';
+    const badge = document.createElement('span');
+    badge.id = 'cart-badge';
+    badge.className = 'cart-badge';
+    badge.style.display = 'none';
+    cartBtn.appendChild(badge);
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>
